@@ -44,3 +44,15 @@ if(getenv('WP_ENV') == 'development')
 	
 define('WP_SITEURL', WP_HOME);
 ```
+
+# Deployment
+There are several ways to deploy this application.
+
+## Elastic Beanstalk
+This doesn't require you to create a Docker image for the application. In fact, it doesn't need to know that you're using Docker. What we essentially doing here is to upload our application code in the `app` folder to Elastic Beanstalk environment in which we have to configure the environment to be a web server that uses a PHP preconfigured platform.  
+
+## Elastic Container Service (ECS)(?)
+
+## Elastic Container Service for Kubernetes EKS (AWS EKS)
+
+## Lightsail (?)
