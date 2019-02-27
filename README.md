@@ -7,7 +7,7 @@
 - Run the bash script `build.sh` instead of `docker-compose up -d --build`.
 - This would copy the files from `post_build` directory to `app` directory **AFTER** the Wordpress image is copied and mounted on the volume to `app` directory.
 
-We added the following files with these addtional code:
+# We edited the following files with some addtional code:
 ### .htaccess
 
 ```apacheconf
