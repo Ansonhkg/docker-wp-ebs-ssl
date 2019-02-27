@@ -1,0 +1,22 @@
+version: '3'
+services:
+  wordpress:
+    image: wordpress:latest
+    restart: always
+    volumes:
+      - ./app:/var/www/html
+    environment:
+      WP_DB_HOST: ${WP_DB_HOST}
+      WP_DB_USER: ${WP_DB_USER}
+      WP_DB_PASSWORD: ${WP_DB_PASSWORD}
+      WP_DB_NAME: ${WP_DB_NAME}
+      WP_ENV: ${WP_ENV}
+    ports:
+      - 80:80
+      - 443:443
+    networks:
+      - back
+networks:
+  back:
+volumes:
+  db_data:

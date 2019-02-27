@@ -1,0 +1,14 @@
+# Redirect HTTP to HTTPS (all requests)
+RewriteCond %{HTTP:X-Forwarded-Proto} ^http$
+RewriteRule ^ https://YOUR_URL%{REQUEST_URI} [R=302,L]
+
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+# END WordPress
