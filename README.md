@@ -1,12 +1,13 @@
 # How to use? (Only experimental)
-- Edit the environment variable in `.env-sample` and rename it ias `.env`.
+- Edit the environment variable in `.env-sample` and rename it as `.env`
 - Run `./build.sh` in the root directory.
+- In the `wp-config.php` file, find `define('WP_HOME', 'http://localhost');` and change `http://localhost` to your local development url. e.g `http://mywordpress.dev`
 
 # Docker-compose
 - Run the bash script `build.sh` instead of `docker-compose up -d --build`.
 - This would copy the files from `post_build` directory to `app` directory **AFTER** the Wordpress image is copied and mounted on the volume to `app` directory.
 
-We edited the following files with these addtional code:
+We added the following files with these addtional code:
 ### .htaccess
 
 ```apacheconf
