@@ -7,7 +7,7 @@
 - This would copy the files from `post_build` directory to `app` directory **AFTER** the Wordpress image is copied and mounted on the volume to `app` directory.
 
 We edited the following files with these addtional code:
-## .htaccess
+### .htaccess
 
 ```
 # Redirect HTTP to HTTPS (all requests)
@@ -15,7 +15,7 @@ RewriteCond %{HTTP:X-Forwarded-Proto} ^http$
 RewriteRule ^ https://YOUR_URL%{REQUEST_URI} [R=302,L]
 ```
 
-## wp-config
+### wp-config
 ```
  * ==================== SSL CONFIGURATION ====================
  * Websites behind load balancers or reverse proxies that support
