@@ -9,14 +9,14 @@
 We edited the following files with these addtional code:
 ### .htaccess
 
-```
+```apacheconf
 # Redirect HTTP to HTTPS (all requests)
 RewriteCond %{HTTP:X-Forwarded-Proto} ^http$
 RewriteRule ^ https://YOUR_URL%{REQUEST_URI} [R=302,L]
 ```
 
 ### wp-config
-```
+```php
  * ==================== SSL CONFIGURATION ====================
  * Websites behind load balancers or reverse proxies that support
  * HTTP_X_FORWARDED_PROTO can be fixed by adding the following code 
