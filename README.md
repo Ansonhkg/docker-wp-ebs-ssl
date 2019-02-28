@@ -1,3 +1,6 @@
+# Wordpress on Elastic Beanstalk with SSL
+This project builds a ready to use Wordpress app and deploys it on Elastic Beanstalk with a MySQL RDS Database.
+
 # How to use? (Only experimental)
 - Edit the environment variable in `.env-sample` and rename it as `.env`
 - Run `./build.sh` in the root directory.

@@ -1,6 +1,6 @@
 # Redirect HTTP to HTTPS (all requests)
 RewriteCond %{HTTP:X-Forwarded-Proto} ^http$
-RewriteRule ^ https://YOUR_URL%{REQUEST_URI} [R=302,L]
+RewriteRule ^ https://mywordpress1.eu-west-2.elasticbeanstalk.com%{REQUEST_URI} [R=302,L]
 
 # BEGIN WordPress
 <IfModule mod_rewrite.c>
