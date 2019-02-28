@@ -16,7 +16,7 @@ RewriteCond %{HTTP:X-Forwarded-Proto} ^http$
 RewriteRule ^ https://YOUR_URL%{REQUEST_URI} [R=302,L]
 ```
 
-### wp-config
+### wp-config.php
 ```php
  * ==================== SSL CONFIGURATION ====================
  * Websites behind load balancers or reverse proxies that support
