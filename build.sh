@@ -1,13 +1,6 @@
 #!/bin/bash
 CONTAINER='localhost:80'
 
-# Check if service is already running.
-if curl -s $CONTAINER > /dev/null
-then
-  echo $CONTAINER is already up and running.
-  exit 1
-fi
-
 # Run Docker container here
 echo "==================== CREATING CONTAINERS ===================="
 docker-compose up -d --build
